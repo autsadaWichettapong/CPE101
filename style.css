@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Aboreto", system-ui;
+}
+
+body{
+    background-image: url("https://img2.pic.in.th/950249f1-b38e-4dda-8776-691539b28e7c.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Overlay โปร่งใส */
+body::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* ให้เนื้อหาอยู่เหนือ Overlay */
+body *{
+    position: relative;
+    z-index: 1;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.countdown{
+    display: flex;
+    gap: 30px;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time h2{
+    font-size: 60px;
+    margin-bottom: 8px;
+}
+
+.time small{
+    font-size: 16px;
+}
+
+@media (max-width: 500px){
+
+    h1{
+        font-size: 28px;
+    }
+
+    .countdown{
+        gap: 15px;
+    }
+
+    .time h2{
+        font-size: 35px;
+    }
+
+    .time small{
+        font-size: 12px;
+    }
+}
